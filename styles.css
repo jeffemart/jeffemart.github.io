@@ -104,32 +104,51 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .main-content {
+    body {
+        display: flex;
         flex-direction: column;
-        min-height: auto;
+        min-height: 100vh;
+        overflow-x: hidden;
     }
 
-    aside, section {
-        width: 100%;
-        min-height: auto;
+    .main-content {
+        flex-direction: column;
+        flex: 1;
+        height: auto;
+        overflow: visible;
+        position: static;
     }
 
     aside {
-        padding: 40px 20px;
+        width: 100%;
+        min-height: auto;
+        position: static;
+        padding: 20px;
+        background-color: #F3F4F6;
     }
 
     section {
-        padding: 40px 20px;
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+        position: static;
+        background-color: #fff;
     }
 
-    footer {
-        min-height: auto;
-        padding: 40px 0;
+    .projects-container {
+        width: 100%;
+        margin-top: 20px;
     }
 
     .profile-container {
         max-width: 600px;
         margin: 0 auto;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        margin-top: 0;
     }
 
     .projects-grid {
@@ -157,11 +176,15 @@ footer {
 
 @media (max-width: 480px) {
     .main-content {
-        gap: 20px;
+        gap: 0;
     }
 
     aside, section {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .projects-grid {
+        margin-top: 20px;
     }
 
     .profile-container {
@@ -226,7 +249,7 @@ footer {
 @media (max-height: 800px) {
     aside {
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
     }
 }
 
@@ -447,6 +470,6 @@ footer {
 .main-content {
     display: flex;
     width: 100%;
-    min-height: 80vh;
     flex: 1;
+    background-color: #fff;
 }
